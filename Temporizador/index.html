@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>Temporizador Web App</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="estilosTempo.css">
+    </head>
+    <body>
+        <header class="cabecera">
+            <div class="cabecera_content">
+                <h1 class="cabecera_title">
+                <a href="index.html">
+                    Reloj App
+                </a>
+                </h1>
+                <img src="/img/iconoMenu.png" alt="" class="cabecera_iconMenu" id="iconoMenu">
+                <img src="/img/iconoCerrar.png" alt="" class="cabecera_iconMenu" id="iconoCerrar">
+            </div>
+            
+            <div class="cabecera_content">
+                
+                <ul class="cabecera_list" id="cabecera_list">
+                    <li class="cabecera_list_element">
+                        <a href="/Alarma/index.html">Alarma</a>
+                    </li>
+                    <li class="cabecera_list_element">
+                        <a href="">Cronómetro</a>
+                    </li>
+                    <li class="cabecera_list_element">
+                        <a href="">Temporizador</a>
+                    </li>
+                </ul>
+            </div>
+        </header>
+        <main>
+            <div class="main_content">
+                <div class="main_title">
+                    <h1 class="title_text">TEMPORIZADOR</h1>
+                </div>
+                <div class="content_tiempo">
+                    <div>
+                        <h1 class="text_tiempo">HORAS:</h1>
+                        <input type="number" class="input_tiempo" id="horas">
+                    </div>
+                    <div>
+                        <h1 class="text_tiempo">MINUTOS:</h1>
+                        <input type="number" class="input_tiempo" id="minutos">
+                    </div>
+
+                    <div>
+                        <h1 class="text_tiempo">SEGUNDOS:</h1>
+                        <input type="number" class="input_tiempo" id="segundos">
+                    </div>
+                </div>
+                <div class="content_sonido">
+                    <select id="selectorSonido">
+                        <option value="alarma1.mp3">Alarma 1</option>
+                        <option value="alarma2.mp3">Alarma 2</option>
+                        <option value="alarma3.mp3">Alarma 3</option>
+                    </select>
+                    <audio id="sonidoAlarma" controls>
+                        <source src="alarma1.mp3" type="audio/mpeg">
+                        Tu navegador no soporta audio.
+                    </audio>
+                </div>
+                <div class="areaBotones">
+                <button id="btnIniciarTemporizador" onclick="iniciarTemporizador()">Iniciar</button>
+                <button id="btnDetenerTemporizador" onclick="pausarTemporizador()">Detener</button>
+                <button id="btnRestablecerTemporizador" onclick="restablecerTemporizador()">Restablecer</button>
+                <button id="btnDetenerAlarma" onclick="detenerAlarma()">DETENER ALARMA</button>
+            </div>
+            </div>
+        </main>
+    </body>
+    <script src="temporizador.js"></script>
+</html>
