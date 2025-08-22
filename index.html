@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>Reloj Web App</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="estilos.css">
+    </head>
+    <body onload="mostrarHora(); mostrarFecha()">
+        <header class="cabecera">
+            <div class="cabecera_content">
+                <h1 class="cabecera_title">
+                <a href="index.html">
+                    Reloj App
+                </a>
+                </h1>
+                <img src="img/iconoMenu.png" alt="" class="cabecera_iconMenu" id="iconoMenu">
+                <img src="img/iconoCerrar.png" alt="" class="cabecera_iconMenu" id="iconoCerrar">
+            </div>
+            
+            <div class="cabecera_content">
+                
+                <ul class="cabecera_list" id="cabecera_list">
+                    <li class="cabecera_list_element">
+                        <a href="/Alarma/index.html">Alarma</a>
+                    </li>
+                    <li class="cabecera_list_element">
+                        <a href="">Cronómetro</a>
+                    </li>
+                    <li class="cabecera_list_element">
+                        <a href="">Temporizador</a>
+                    </li>
+                </ul>
+            </div>
+        </header>
+        <main>
+            <div class="main_content">
+                <h1 class="main_horas" id="elementoHora">00:00:00</h1>
+                <h1 class="main_fecha" id="elementoFecha"></h1>
+            </div>
+        </main>
+    </body>
+    <script src="script.js"></script>
+</html>
