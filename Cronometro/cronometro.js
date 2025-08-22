@@ -44,6 +44,31 @@ btnFinalizar.addEventListener("click", function(){
     location.reload()
 })
 */
+
+let iconMenu = document.getElementById("iconoMenu");
+let iconoCerrar = document.getElementById("iconoCerrar");
+
+let cabeceraList = document.getElementById("cabecera_list");
+//let cabeceraListElement = document.getElementById("cabecera_list_element");
+
+
+function mostrarMenu(){
+    cabeceraList.style.display = "flex";
+    iconMenu.style.display ="none";
+    iconoCerrar.style.display = "block";
+}
+
+iconMenu.addEventListener("click", mostrarMenu);
+
+function cerrarMenu(){
+    cabeceraList.style.display = "none";
+    iconMenu.style.display ="block";
+    iconoCerrar.style.display = "none";
+}
+
+iconoCerrar.addEventListener("click", cerrarMenu);
+
+
 let decoration = document.getElementById("decoration");
 let textCronometro = document.getElementById("textoCronometro");
 let btnPlay = document.getElementById("btn_play");
@@ -95,4 +120,5 @@ function finalizarCronometro(){
 btnPlay.addEventListener("click", iniciarCronometro);
 btnPause.addEventListener("click", pausarCronometro);
 btnStop.addEventListener("click", finalizarCronometro);
+
 //NO FUNCIONA
